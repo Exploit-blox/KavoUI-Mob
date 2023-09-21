@@ -261,6 +261,7 @@ function Kavo.CreateLib(kavName, themeList)
        Main.Visible = false
     elseif Main.Visible == false then
        Main.Visible = true
+     end
     end)
     
     ToggleUICorner.CornerRadius = UDim.new(0, 5)
