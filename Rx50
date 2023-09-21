@@ -242,11 +242,16 @@ function Kavo.CreateLib(kavName, themeList)
     MainCorner.Name = "MainCorner"
     MainCorner.Parent = Main
     
+    ScreenGui.Parent = game.CoreGui
+    ScreenGui.Name = "name"
+    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    ScreenGui.ResetOnSpawn = false
+    
     ToggleUI.Name = "ToggleUI"
     ToggleUI.Parent = ScreenGui
-    ToggleUI.BackgroundTransparency = 0.500
+    ToggleUI.BackgroundTransparency = 0.300
     ToggleUI.BackgroundColor3 = Color3.new(0, 0, 0)
-    ToggleUI.Position = UDim2.new(0.15, 0, 0.12, 0)
+    ToggleUI.Position = UDim2.new(0.1, 0, 0.1, 0)
     ToggleUI.Size = UDim2.new(0, 60, 0, 60)
     ToggleUI.Font = Enum.Font.SciFi
     ToggleUI.Text = "TOGGLE"
@@ -254,8 +259,14 @@ function Kavo.CreateLib(kavName, themeList)
     ToggleUI.TextScaled = false
     ToggleUI.TextSize = 15
     ToggleUI.TextWrapped = true
-    ToggleUI.Visible = false
+    ToggleUI.Visible = true
     ToggleUI.Draggable = true
+    ToggleUI.MouseButton1Click:Connect(function()
+    if Main.Visible == true then
+       Main.Visible = false
+    elseif Main.Visible == false then
+       Main.Visible = true
+    end)
     
     ToggleUICorner.CornerRadius = UDim.new(0, 5)
     ToggleUICorner.Name = "ToggleCorner"
