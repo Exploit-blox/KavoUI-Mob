@@ -242,11 +242,6 @@ function Kavo.CreateLib(kavName, themeList)
     MainCorner.Name = "MainCorner"
     MainCorner.Parent = Main
     
-    ScreenGui.Parent = game.CoreGui
-    ScreenGui.Name = "name"
-    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    ScreenGui.ResetOnSpawn = false
-    
     ToggleUI.Name = "ToggleUI"
     ToggleUI.Parent = ScreenGui
     ToggleUI.BackgroundTransparency = 0.300
